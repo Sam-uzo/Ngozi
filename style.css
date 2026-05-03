@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: purple;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+main {
+  display: flex;
+  padding: 3%;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  width: 80%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3px);
+}
+button {
+  border-radius: 20px;
+  padding: 0;
+  width: 100%;
+  border: none;
+  animation-name: forButton;
+  animation-duration: 2s;
+  animation-play-state: paused;
+  animation-direction: reverse;
+}
+img {
+  width: 100%;
+  border-radius: 20px;
+  float: right;
+  object-fit: cover;
+}
+#info-div {
+  color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 25%;
+  height: 40%;
+}
+#image-div {
+  flex-shrink: 2;
+  width: 40%;
+  /* height: 80%; */
+}
+#info-div div {
+  flex-shrink: 2;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+@media (max-width: 1026px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+    padding: 1%;
+    gap: 1%;
+  }
+  #info-div {
+    width: 90%;
+    align-items: center;
+  }
+  h3 {
+    font-size: small;
+  }
+  #info-div div {
+    gap: 8px;
+  }
+  #image-div {
+    width: 100%;
+  }
+}
+@keyframes forButton {
+  0% {
+    transform: rotateY(180deg);
+  }
+}
